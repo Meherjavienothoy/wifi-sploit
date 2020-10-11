@@ -10,10 +10,10 @@ def brute(username, password):
     r = requests.post(url, data=data)
     if expression not in r.content:
         print("Brute Forcing...")
-        print "[+] Password found : ",password
+        print ("[+] Password found : "),password
         sys.exit()
     else:
-        print r.content," ",password
+        print (r.content)," ",password
 
 def main():
     words = [w.strip() for w in open("password.txt", "rb").readlines()]
